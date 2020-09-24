@@ -1,4 +1,4 @@
-#easy-flex
+# easy-flex
 
 > 能够快捷使用flex的css组件
 
@@ -11,15 +11,17 @@ flex-h横向布局，flex-v垂直布局，设置为主轴方向；
 如果有其它布局要求，请使用flex布局的官方属性来设置。
 ```
 
-###配合框架
+#### 配合框架
 ```
-Vue下需要直接使用flex-v作为标签名的话要让框架将标签识别为自定义标签，需要加入以下代码：
+Vue下使用flex-h、flex-v、flex-fill作为标签名的话要让vue识别为自定义标签，需要加入以下代码：
 
 Vue.config.ignoredElements = [
   "flex-h",
   "flex-v",
   "flex-fill"
 ]
+
+建议直接使用class名称
 ```
 
 [flex布局的参考地址](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
