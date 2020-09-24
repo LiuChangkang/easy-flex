@@ -1,7 +1,7 @@
 {
   "name": "easy-flex",
-  "version": "1.0.1",
-  "description": "easy flex",
+  "version": "1.0.2",
+  "description": "use flex easier",
   "main": "flex.css",
   "keywords": [
     "flex",
