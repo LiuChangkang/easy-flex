@@ -7,6 +7,10 @@
     "flex",
     "css"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LiuChangkang/easy-flex"
+  },
   "author": "LiuChangkang",
   "license": "MIT"
 }
