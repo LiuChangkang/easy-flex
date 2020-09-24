@@ -1,0 +1,15 @@
+{
+  "name": "easy-flex",
+  "version": "1.0.0",
+  "description": "easy flex",
+  "main": "flex.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "flex",
+    "css"
+  ],
+  "author": "LiuChangkang",
+  "license": "MIT"
+}
