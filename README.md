@@ -1,6 +1,6 @@
 # easy-flex
 
-> 能够快捷使用flex的css组件
+> 能够快捷使用flex布局的css组件
 
 ## Installation
 ```
