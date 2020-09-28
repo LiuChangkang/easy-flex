@@ -2,6 +2,19 @@
 
 > 能够快捷使用flex的css组件
 
+## Installation
+```
+npm install vue-resize-pane --save
+
+yarn add vue-resize-pane
+```
+
+### Usage
+```
+import 'easy-flex'
+```
+
+### Tip
 ```
 1、flex-h横向布局，flex-v垂直布局，设置为主轴方向；
 2、同时添加inline类名可以使元素变为inline的flex布局；
