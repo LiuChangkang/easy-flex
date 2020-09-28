@@ -6,6 +6,8 @@
 ```
 npm install vue-resize-pane --save
 
+or
+
 yarn add vue-resize-pane
 ```
 
