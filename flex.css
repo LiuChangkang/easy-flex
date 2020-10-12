@@ -5,7 +5,8 @@
 
 flex-v, flex-h,
 .flex-v, .flex-h,
-flex-v.flex-fill, flex-h.flex-fill {
+flex-v.flex-fill,
+flex-h.flex-fill {
   display: flex;
   align-items: center;
 }
@@ -13,6 +14,18 @@ flex-v.flex-fill, flex-h.flex-fill {
 flex-v.inline,
 .flex-h.inline {
   display: inline-flex;
+}
+
+flex-h.wrap, .flex-h.wrap,
+flex-v.wrap, .flex-v.wrap{
+  flex-wrap: wrap;
+}
+
+flex-h.wrap > hr,
+.flex-h.wrap > hr {
+  width: 100%;
+  border: 0;
+  margin: 0;
 }
 
 flex-v, .flex-v {

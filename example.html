@@ -11,7 +11,7 @@
         .flex-h>div, .flex-v>div{
             border: 1px solid #222222;
         }
-        #flex1, #flex2, #flex3, #flex4{
+        #flex1, #flex2, #flex3, #flex4, #flex10, #flex11{
             width: 30%;
             height: 100px;
             background-color: #f0f0f0;
@@ -22,15 +22,19 @@
         }
         #flex5, #flex6, #flex7, #flex8, #flex9{
             width: 100px;
-            height: 300px;
+            height: 250px;
             background-color: #f0f0f0;
         }
         #flex5>div, #flex6>div, #flex7>div, #flex8>div{
             width: 50px;
             height: 50px;
         }
-        #flex9>div{
+        #flex9>div, #flex10>div, #flex11>div{
             height: 50px;
+        }
+        #flex10>div, #flex11>div{
+            box-sizing: border-box;
+            width: 50px;
         }
     </style>
 </head>
@@ -42,6 +46,7 @@
             <li>子元素排列方式使用视觉的上(top)下(bottom)左(left)右(right)作为class名；</li>
             <li>子元素添加flex-fill的class名可以撑开，填充空间；</li>
             <li>交叉轴默认居中，需要拉伸可以添加stretch类名；</li>
+            <li>横向多行布局可在父节点添加wrap类名，子节点需换行的位置使用hr标签换行，兼容性请查阅caniuse；</li>
             <li>如果有其它布局要求，请使用flex布局的官方属性来设置。</li>
         </ul>
         <div class="title">横向 <code>flex-h</code></div>
@@ -92,6 +97,22 @@
         <div id="flex9" class="flex-v stretch">
             <div>1</div>
             <div>2</div>
+        </div>
+        <div class="title">横向换行，可快速开发多行布局的样式，使用hr标签换行 <code>flex-h wrap</code></div>
+        <div id="flex10" class="flex-h wrap">
+            <div>1</div>
+            <div>2</div>
+            <hr />
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <div class="title">横向换行，基于上述换行的方式，可以快速开发左右对齐的布局 <code>flex-h wrap left right</code></div>
+        <div id="flex11" class="flex-h wrap left right">
+            <div>1</div>
+            <div>2</div>
+            <hr />
+            <div>3</div>
+            <div>4</div>
         </div>
     </div>
 </body>
