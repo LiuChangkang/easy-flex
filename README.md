@@ -4,11 +4,11 @@
 
 ## Installation
 ```
-npm install vue-resize-pane --save
+npm install easy-flex --save
 
 or
 
-yarn add vue-resize-pane
+yarn add easy-flex
 ```
 
 ### Usage
