@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="flex.css">
     <style>
         .demo-body{
-            min-width: 300px;
+            min-width: 350px;
             max-width: 800px;
+            padding-bottom: 15px;
             margin: auto;
+            text-align: justify;
+        }
+        ul{
+            padding-right: 8px;
         }
         .title{
             padding: 20px 10px 10px 10px;
@@ -17,7 +23,8 @@
             border: 1px solid #222222;
         }
         #flex1, #flex2, #flex3, #flex4, #flex10, #flex11{
-            width: 30%;
+            width: 50%;
+            min-width: 333px;
             height: 100px;
             background-color: #f0f0f0;
         }
@@ -41,16 +48,25 @@
             box-sizing: border-box;
             width: 50px;
         }
+        code{
+            padding-left: 5px;
+            font-weight: bold;
+            font-size: 120%;
+        }
+        code::before{
+            content: "-> ";
+        }
     </style>
 </head>
 <body>
 <h1 style="text-align: center">easy-flex</h1>
 <hr>
 <div class="demo-body">
+    <div>建议打开浏览器开发者工具(F12)查看demo的代码</div>
     <ul>
         <li>flex-h横向布局，flex-v垂直布局，设置为主轴方向；</li>
         <li>同时添加inline类名可以是元素变为inline的flex布局；</li>
-        <li>子元素排列方式使用视觉的上(top)下(bottom)左(left)右(right)作为class名；</li>
+        <li>子元素排列方向使用视觉的上(top)下(bottom)左(left)右(right)作为class名；</li>
         <li>子元素添加flex-fill的class名可以撑开，填充空间；</li>
         <li>交叉轴默认居中，需要拉伸可以添加stretch类名；</li>
         <li>横向多行布局可在父节点添加wrap类名，子节点需换行的位置使用hr标签换行，兼容性请查阅caniuse；</li>
@@ -88,7 +104,7 @@
         <div>1</div>
         <div>2</div>
     </div>
-    <div class="title">垂直，上下散开 <code>flex-v top bottom</code></div>
+    <div class="title">垂直，上下散开(相反方向同时设置即可散开排列) <code>flex-v top bottom</code></div>
     <div id="flex7" class="flex-v top bottom">
         <div>1</div>
         <div>2</div>
@@ -113,7 +129,7 @@
         <div>3</div>
         <div>4</div>
     </div>
-    <div class="title">横向换行，基于上述换行的方式，可以快速开发左右对齐的布局 <code>flex-h wrap left right</code></div>
+    <div class="title">横向换行，基于上一种换行的方式，可以快速开发左右对齐的布局 <code>flex-h wrap left right</code></div>
     <div id="flex11" class="flex-h wrap left right">
         <div>1</div>
         <div>2</div>
