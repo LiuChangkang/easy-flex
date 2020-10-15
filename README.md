@@ -2,6 +2,8 @@
 
 > 能够快捷使用flex布局的css组件
 
+[Demo](https://liu_changkang.gitee.io/easy-flex/)
+
 ## Installation
 ```
 npm install easy-flex --save
