@@ -5,7 +5,7 @@
 
 [Demo & Docs](https://liu_changkang.gitee.io/easy-flex/)
 
-#### Installation
+### Installation
 ```
 npm install easy-flex --save
 
@@ -14,17 +14,17 @@ or
 yarn add easy-flex
 ```
 
-#### CDN
+### CDN
 ```
 https://unpkg.com/easy-flex/flex.min.css
 ```
 
-#### Usage
+### Usage
 ```
 import 'easy-flex'
 ```
 
-#### Tip
+### Tip
 ```
 使用class名：flex-h、flex-v、top、right、bottom、left、center，互相组合可以开发绝大多数的布局。
 
@@ -36,7 +36,7 @@ import 'easy-flex'
 具体使用方式可以直接查看example.html
 ```
 
-#### 配合vue
+### 配合vue
 ```
 Vue下使用flex-h、flex-v、flex-fill作为标签名的话要让vue识别为自定义标签，需要加入以下代码：
 
@@ -49,7 +49,7 @@ Vue.config.ignoredElements = [
 建议全部使用class名
 ```
 
-#### 链接
+### 链接
 [flex兼容性](https://caniuse.com/?search=css%20flex)
 
 [flex-wrap兼容性](https://caniuse.com/?search=flex-wrap)
