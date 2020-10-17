@@ -5,6 +5,11 @@
 
 [Demo & Docs](https://liu_changkang.gitee.io/easy-flex/)
 
+CDN: 
+```
+https://unpkg.com/easy-flex/flex.min.css
+```
+
 ## Installation
 ```
 npm install easy-flex --save
