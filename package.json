@@ -5,7 +5,9 @@
   "main": "flex.css",
   "keywords": [
     "flex",
-    "css"
+    "css",
+    "style",
+    "easy"
   ],
   "repository": {
     "type": "git",
