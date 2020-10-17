@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="flex.css">
+    <style>
+        .demo-body{
+            min-width: 350px;
+            max-width: 800px;
+            padding-bottom: 15px;
+            margin: auto;
+            text-align: justify;
+        }
+        ul{
+            padding-right: 8px;
+        }
+        h3{
+            padding-top: 9px;
+        }
+        div{
+            box-sizing: border-box;
+        }
+        .title{
+            padding: 20px 10px 10px 10px;
+        }
+        .flex-h>div, .flex-v>div{
+            border: 1px solid #222222;
+            white-space: nowrap;
+        }
+        .flex-h-area>.flex-h{
+            min-width: 333px;
+            height: 100px;
+            background-color: #f0f0f0;
+        }
+        .flex-h-area>.flex-h:not(.inline){
+            width: 50%;
+        }
+        .flex-h-area>.flex-h.inline{
+            width: 39%;
+        }
+        .flex-h-area>.flex-h>div{
+            width: 50px;
+            height: 50px;
+        }
+        .flex-v-area>.flex-v{
+            width: 110px;
+            height: 310px;
+            background-color: #f0f0f0;
+        }
+        .flex-v-area>.flex-v>div{
+            width: 60px;
+            height: 60px;
+        }
+        .flex-v.stretch>div{
+            width: auto;
+        }
+        .flex-h-wrap-area>.flex-h{
+            height: 200px;
+            background-color: #f0f0f0;
+        }
+        .flex-h-wrap-area>.flex-h>div{
+            width: 50px;
+            height: 50px;
+        }
+        .flex-v-wrap-area>.flex-v{
+            width: 160px;
+            height: 310px;
+            background-color: #f0f0f0;
+        }
+        .flex-v-wrap-area>.flex-v>div{
+            width: 60px;
+            height: 60px;
+        }
+        code{
+            padding-left: 5px;
+            font-weight: bold;
+            font-size: 120%;
+        }
+        code::before{
+            content: "> ";
+        }
+        .anchor{
+            position: fixed;
+            right: 3vw;
+            top: 9vh;
+            height: 112px;
+            padding: 7px 8px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<h1 style="text-align: center">easy-flex</h1>
+<hr>
+<div class="demo-body">
+    <div>建议打开浏览器开发者工具(F12)查看demo的代码</div>
+    <ul>
+        <li>flex-h横向排列，flex-v垂直排列；</li>
+        <li>同时添加inline类名可以是元素变为inline的flex布局；</li>
+        <li>子元素排列方向使用视觉的上(top)下(bottom)左(left)右(right)作为class名；</li>
+        <li>横向多行布局可在父节点添加wrap类名，子节点需换行的位置使用hr标签换行，兼容性请查阅<a href="https://caniuse.com/?search=css%20flex" target="_blank">caniuse</a>；</li>
+        <li>如果有其它布局要求，请使用flex布局的官方属性来设置。</li>
+    </ul>
+    <p>使用class名：flex-h、flex-v、top、right、bottom、left、center，互相组合可以开发绝大多数的布局。</p>
+    <div id="flexH" class="flex-h-area">
+        <h3>横向</h3>
+        <div class="title">横向，垂直方向默认居中 <code>flex-h</code></div>
+        <div class="flex-h">
+            <div>1</div>
+            <div>2</div>
+        </div>
+        <div class="title">横向，靠右 <code>flex-h right</code></div>
+        <div class="flex-h right">
+            <div>1</div>
+            <div>2</div>
+        </div>
+        <div class="title">居中 <code>flex-h center</code></div>
+        <div class="flex-h center">
+            <div>1</div>
+            <div>2</div>
+        </div>
+        <div class="title">横向，靠上(top)或下(bottom) <code>flex-h top</code></div>
+        <div class="flex-h left top">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="title">横向，左右散开(相反方向同时设置即可散开排列) <code>flex-h left right</code></div>
+        <div class="flex-h left right">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="title">横向，特定子元素撑开，兄弟元素间保持1:1的宽度，子元素添加 <code>flex-fill</code></div>
+        <div class="flex-h">
+            <div>1</div>
+            <div class="flex-fill">2 > flex-fill</div>
+            <div class="flex-fill">3 > flex-fill</div>
+            <div>4</div>
+        </div>
+        <div class="title">横向，某个元素垂直布局方向不同，子元素添加self-[top/center/bottom] <code>flex-h top</code></div>
+        <div class="flex-h top">
+            <div>1</div>
+            <div class="self-bottom flex-fill">2 > self-bottom<br>flex-fill</div>
+            <div class="self-center flex-fill">3 > self-center<br>flex-fill</div>
+            <div>4</div>
+        </div>
+        <div class="title">横向，行内元素 <code>flex-h inline</code></div>
+        <div class="flex-h inline" style="min-width: auto">
+            <div>1</div>
+            <div>2</div>
+        </div>
+        <div class="flex-h inline" style="min-width: auto">
+            <div>1</div>
+            <div>2</div>
+        </div>
+    </div>
+
+    <div id="flexV" class="flex-v-area">
+        <h3>垂直</h3>
+        <div class="title">垂直，水平方向默认居中 <code>flex-v</code></div>
+        <div class="flex-v">
+            <div>1</div>
+            <div>2</div>
+        </div>
+        <div class="title">垂直，靠下 <code>flex-v bottom</code></div>
+        <div class="flex-v bottom">
+            <div>1</div>
+            <div>2</div>
+        </div>
+        <div class="title">居中 <code>flex-v center</code></div>
+        <div class="flex-v center">
+            <div>1</div>
+            <div>2</div>
+        </div>
+        <div class="title">垂直，上下散开(相反方向同时设置即可散开排列) <code>flex-v top bottom</code></div>
+        <div class="flex-v top bottom">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="title">垂直，特定子元素撑开，兄弟元素间保持1:1的高度 <code>flex-fill</code></div>
+        <div class="flex-v">
+            <div>1</div>
+            <div class="flex-fill">2<br>flex-fill</div>
+            <div class="flex-fill">3<br>flex-fill</div>
+            <div>4</div>
+        </div>
+        <div class="title">垂直，所有子元素拉伸 <code>flex-v stretch</code></div>
+        <div class="flex-v stretch">
+            <div>1</div>
+            <div>2</div>
+        </div>
+    </div>
+
+    <div id="flexHWrap" class="flex-h-wrap-area">
+        <h3>横向多行（进阶）</h3>
+        <div class="title">横向多行，默认垂直居中，可快速开发多行布局的样式，使用hr标签换行 <code>flex-h wrap</code></div>
+        <div class="flex-h wrap top">
+            <div>1</div>
+            <div>2</div>
+            <hr />
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <div class="title">横向多行，设置相反方向让每行左右散开 <code>flex-h wrap left right</code></div>
+        <div class="flex-h wrap left right">
+            <div>1</div>
+            <div>2</div>
+            <hr />
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <div class="title">横向多行，设置top或bottom可以设置单行内的子元素布局方向 <code>flex-h wrap top</code></div>
+        <div class="flex-h wrap top">
+            <div>1</div>
+            <div style="height: 30px">2</div>
+            <hr />
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <div class="title">横向多行，设置between让每行之间散开 <code>flex-h wrap between</code></div>
+        <div class="flex-h wrap between">
+            <div>1</div>
+            <div>2</div>
+            <hr />
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </div>
+
+    <div id="flexVWrap" class="flex-v-wrap-area">
+        <h3>垂直多列（进阶）</h3>
+        <div class="title">垂直多列，默认垂直居中，可快速开发多行布局的样式，使用hr标签换行 <code>flex-h wrap</code></div>
+        <div class="flex-v wrap">
+            <div>1</div>
+            <div>2</div>
+            <hr />
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <div class="title">垂直多列，设置相反方向让每列上下散开 <code>flex-h wrap top bottom</code></div>
+        <div class="flex-v wrap left right">
+            <div>1</div>
+            <div>2</div>
+            <hr />
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <div class="title">垂直多列，设置left或right可以设置单列内的子元素布局方向 <code>flex-h wrap left</code></div>
+        <div class="flex-v wrap left">
+            <div>1</div>
+            <div style="width: 30px">2</div>
+            <hr />
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <div class="title">垂直多列，设置between让每列之间散开 <code>flex-h wrap between</code></div>
+        <div class="flex-v wrap between">
+            <div>1</div>
+            <div>2</div>
+            <hr />
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </div>
+
+    <div class="anchor flex-v top bottom">
+        <a href="#flexH">横向</a>
+        <a href="#flexV">垂直</a>
+        <a href="#flexHWrap">横向多行</a>
+        <a href="#flexVWrap">垂直多列</a>
+    </div>
+</div>
+</body>
+</html>

@@ -19,11 +19,24 @@ flex-v.inline,
 flex-h.wrap, .flex-h.wrap,
 flex-v.wrap, .flex-v.wrap{
   flex-wrap: wrap;
+  align-content: center;
+}
+
+flex-h.wrap.between, .flex-h.wrap.between,
+flex-v.wrap.between, .flex-v.wrap.between{
+  align-content: space-between;
 }
 
 flex-h.wrap > hr,
-.flex-h.wrap > hr {
+.flex-h.wrap > hr{
   width: 100%;
+  border: 0;
+  margin: 0;
+}
+
+flex-v.wrap > hr,
+.flex-v.wrap > hr{
+  height: 100%;
   border: 0;
   margin: 0;
 }
@@ -65,4 +78,19 @@ flex-v.center, flex-h.center,
 flex-v.top.bottom, flex-h.left.right,
 .flex-v.top.bottom, .flex-h.left.right {
   justify-content: space-between;
+}
+
+flex-h > .self-top, .flex-h > .self-top,
+flex-v > .self-left, .flex-v > .self-left{
+  align-self: flex-start;
+}
+
+flex-h > .self-bottom, .flex-h > .self-bottom,
+flex-v > .self-right, .flex-v > .self-right{
+  align-self: flex-end;
+}
+
+flex-h > .self-center, .flex-h > .self-center,
+flex-v > .self-center, .flex-v > .self-center{
+  align-self: center;
 }
