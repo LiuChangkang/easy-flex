@@ -1,7 +1,7 @@
 # easy-flex
 <a href="https://www.npmjs.com/package/easy-flex"><img src="https://img.shields.io/npm/v/easy-flex.svg?sanitize=true" alt="Version"></a>
 
-> 能够快捷使用flex布局的css组件
+> 能快捷使用flex布局的纯css组件
 
 [Demo & Docs](https://liu_changkang.gitee.io/easy-flex/)
 

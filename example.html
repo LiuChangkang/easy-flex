@@ -21,6 +21,7 @@
         }
         h3{
             padding-top: 5px;
+            margin-bottom: 5px;
         }
         div{
             box-sizing: border-box;
@@ -121,6 +122,7 @@
     <div class="title">子元素在行或列内向右靠 > right</div>
     <div class="title">子元素在行或列内向下靠 > bottom</div>
     <div class="title">子元素在行或列内向左靠 > left</div>
+    <div class="title">*注：主方向上同时设置了相反的方向则散开排列</div>
     <h3 id="baseChildren">子元素（class名）</h3>
     <div class="title">在排列的方向上撑开 > flex-fill</div>
     <div>*注：兄弟元素flex-fill之间1:1撑开</div>
@@ -130,8 +132,10 @@
     <h3 id="highFather">父元素（class名）</h3>
     <div class="title">父元素表现为行内元素 > inline</div>
     <div class="title">子元素一行排满则换行 > wrap</div>
+    <div class="title">子元素在交叉轴上拉伸 > stretch</div>
     <h3 id="highChildren">子元素（未声明的情况下为class名）</h3>
     <div class="title">在wrap下强制换行 > hr(标签)</div>
+    <div class="title">指定子元素单独设置交叉轴布局方向 > self-*[top/right/bottom/left]</div>
     <br>
     <hr>
 
