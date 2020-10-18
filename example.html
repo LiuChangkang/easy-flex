@@ -16,14 +16,17 @@
         ul{
             padding-right: 8px;
         }
-        h3{
+        h2{
             padding-top: 9px;
+        }
+        h3{
+            padding-top: 5px;
         }
         div{
             box-sizing: border-box;
         }
         .title{
-            padding: 20px 10px 10px 10px;
+            padding: 20px 10px 10px 0;
         }
         .flex-h>div, .flex-v>div{
             border: 1px solid #222222;
@@ -83,13 +86,16 @@
         }
         .anchor{
             position: fixed;
-            right: 3vw;
+            right: 2vw;
             top: 9vh;
-            height: 112px;
-            padding: 7px 8px;
+            padding: 3px 8px 7px;
             border: 1px solid #e0e0e0;
             border-radius: 5px;
             background-color: #ffffff;
+        }
+        .anchor>h5{
+            padding: 5px 0;
+            margin: 0;
         }
     </style>
 </head>
@@ -105,7 +111,32 @@
         <li>如果有其它布局要求，请使用flex布局的标准属性来设置。</li>
     </ul>
     <p>使用class名：flex-h、flex-v、top、right、bottom、left、center，互相组合可以开发绝大多数的布局。</p>
-    <div id="flexH" class="flex-h-area">
+    <hr>
+    <h2 id="baseFather">基础教程</h2>
+    <h3>父元素（class名）</h3>
+    <div class="title">横向排列 > flex-h</div>
+    <div class="title">垂直排列 > flex-v</div>
+    <div class="title">子元素在行或列内居中 > center</div>
+    <div class="title">子元素在行或列内向上靠 > top</div>
+    <div class="title">子元素在行或列内向右靠 > right</div>
+    <div class="title">子元素在行或列内向下靠 > bottom</div>
+    <div class="title">子元素在行或列内向左靠 > left</div>
+    <h3 id="baseChildren">子元素（class名）</h3>
+    <div class="title">在排列的方向上撑开 > flex-fill</div>
+    <div>*注：兄弟元素flex-fill之间1:1撑开</div>
+    <br>
+    <hr>
+    <h2>进阶教程</h2>
+    <h3 id="highFather">父元素（class名）</h3>
+    <div class="title">父元素表现为行内元素 > inline</div>
+    <div class="title">子元素一行排满则换行 > wrap</div>
+    <h3 id="highChildren">子元素（未声明的情况下为class名）</h3>
+    <div class="title">在wrap下强制换行 > hr(标签)</div>
+    <br>
+    <hr>
+
+    <h2 id="flexH">Demo</h2>
+    <div class="flex-h-area">
         <h3>横向</h3>
         <div class="title">横向，垂直方向默认居中 <code>flex-h</code></div>
         <div class="flex-h">
@@ -269,6 +300,13 @@
     </div>
 
     <div class="anchor flex-v top bottom">
+        <h5>基础教程</h5>
+        <a href="#baseFather">父元素</a>
+        <a href="#baseChildren">子元素</a>
+        <h5>进阶教程</h5>
+        <a href="#highFather">父元素</a>
+        <a href="#highChildren">子元素</a>
+        <h5>Demo</h5>
         <a href="#flexH">横向</a>
         <a href="#flexV">垂直</a>
         <a href="#flexHWrap">横向多行</a>
