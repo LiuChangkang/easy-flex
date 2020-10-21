@@ -24,6 +24,11 @@ https://unpkg.com/easy-flex/flex.min.css
 import 'easy-flex'
 ```
 
+### 微信小程序下的使用
+```
+下载css源文件，将文件后缀名改为wxss，通过@import引入到app.wxss中
+```
+
 ### Tip
 ```
 使用class名：flex-h、flex-v、flex-fill、top、right、bottom、left、center，互相组合可以开发绝大多数的布局。

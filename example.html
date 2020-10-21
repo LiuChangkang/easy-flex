@@ -133,9 +133,10 @@
     <div class="title">父元素表现为行内元素 > inline</div>
     <div class="title">子元素一行排满则换行 > wrap</div>
     <div class="title">子元素在交叉轴上拉伸 > stretch</div>
+    <div class="title">多行（列）的情况下，行（列）之间在交叉轴散开 > between</div>
     <h3 id="highChildren">子元素（未声明的情况下为class名）</h3>
     <div class="title">在wrap下强制换行 > hr(标签)</div>
-    <div class="title">指定子元素单独设置交叉轴布局方向 > self-*[top/right/bottom/left]</div>
+    <div class="title">指定子元素单独设置交叉轴布局方向 > self-[top/right/bottom/left]</div>
     <br>
     <hr>
 
@@ -158,7 +159,7 @@
             <div>2</div>
         </div>
         <div class="title">横向，靠上(top)或下(bottom) <code>flex-h top</code></div>
-        <div class="flex-h left top">
+        <div class="flex-h top">
             <div>1</div>
             <div>2</div>
             <div>3</div>
@@ -234,7 +235,7 @@
     <div id="flexHWrap" class="flex-h-wrap-area">
         <h3>横向多行（进阶）</h3>
         <div class="title">横向多行，默认垂直居中，可快速开发多行布局的样式，使用hr标签换行 <code>flex-h wrap</code></div>
-        <div class="flex-h wrap top">
+        <div class="flex-h wrap">
             <div>1</div>
             <div>2</div>
             <hr />
@@ -278,7 +279,7 @@
             <div>4</div>
         </div>
         <div class="title">垂直多列，设置相反方向让每列上下散开 <code>flex-h wrap top bottom</code></div>
-        <div class="flex-v wrap left right">
+        <div class="flex-v wrap top bottom">
             <div>1</div>
             <div>2</div>
             <hr />
