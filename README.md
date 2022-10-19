@@ -3,7 +3,7 @@
 
 > 能快捷使用flex布局的纯css组件
 
-[Demo & Docs](https://liu_changkang.gitee.io/easy-flex/)
+[Demo & Docs](https://liuchangkang.gitee.io/easy-flex/)
 
 ### Installation
 ```
