@@ -1,3 +1,33 @@
+/* tailwindcss */
+.flex {
+  align-items: center;
+}
+.flex-col.left, .flex.top:not(.flex-col) {
+  align-items: flex-start;
+}
+.flex-col.top, .flex.left:not(.flex-col) {
+  justify-content: flex-start;
+}
+.flex-col.bottom, .flex.right:not(.flex-col) {
+  justify-content: flex-end;
+}
+.flex.center {
+  justify-content: center;
+}
+.flex-col.top.bottom, .flex.left.right:not(.flex-col) {
+  justify-content: space-between;
+}
+.flex:not(.flex-col) > .self-top, .flex-col > .self-left {
+  align-self: flex-start;
+}
+.flex:not(.flex-col) > .self-bottom, .flex-col > .self-right {
+  align-self: flex-end;
+}
+.flex:not(.flex-col) > .self-center, .flex-col > .self-center {
+  align-self: center;
+}
+
+/* common */
 .flex-fill {
   display: block;
   flex: 1;
